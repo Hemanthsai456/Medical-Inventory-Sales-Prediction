@@ -62,10 +62,6 @@ SHAP was used to understand feature importance and prediction behavior.
 
 K-Means clustering was applied to identify inventory patterns and business insights.
 
-## Repository Structure
-
-(Explain folders)
-
 ## Future Improvements
 
 - Streamlit Dashboard
