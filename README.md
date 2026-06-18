@@ -14,65 +14,61 @@ https://github.com/Hemanthsai456/Medical-Inventory-Sales-Prediction
 
 ## 📌 Project Overview
 
-Medical inventory management is a critical business function that directly impacts product availability, operational efficiency, and profitability. Poor inventory planning can lead to overstocking, increased holding costs, product expiration, and lost sales opportunities.
+Medical Inventory Sales Prediction & Segmentation is an end-to-end Machine Learning and Analytics project developed to forecast medical inventory sales and support inventory management decisions through data-driven insights.
 
-This project leverages Machine Learning and Data Analytics techniques to predict medical inventory sales and identify inventory patterns that support data-driven business decision-making.
+The project combines predictive modeling, interactive analytics dashboards, explainable AI, inventory segmentation, and business recommendation systems into a complete decision-support application.
 
-The project combines:
+The final solution helps identify demand patterns, inventory risks, procurement opportunities, and sales drivers while improving forecasting accuracy and inventory planning.
+
+The project integrates:
 
 * Exploratory Data Analysis (EDA)
+* Interactive Analytics Dashboard
+* Executive KPI Monitoring
 * Sales Forecasting using Machine Learning
 * Feature Importance Analysis
 * Explainable AI (SHAP)
+* Business Recommendation Engine
+* Demand Classification
+* Inventory Risk Assessment
+* Inventory Turnover Analysis
 * K-Means Inventory Segmentation
-* Interactive Streamlit Dashboard
-
----
-
-### Home Page 
+* Interactive Streamlit Deployment
 
 <p align="center">
-  <img src="images\home_page.png" width="900">
+  <img src="images\home_page.png" width="100%">
 </p>
-
 
 ---
 
 ## 🎯 Problem Statement
 
-Medical stores often face challenges in balancing inventory levels with customer demand.
+Medical inventory management is a critical operational challenge where inaccurate forecasting can directly impact product availability, inventory costs, and business performance.
+
+Organizations frequently struggle to maintain optimal inventory levels due to fluctuating demand patterns and procurement uncertainty.
 
 ### Business Challenges
 
-* Overstocking increases inventory carrying costs.
-* Understocking results in missed sales opportunities.
-* Demand patterns are difficult to estimate manually.
-* Inventory behavior varies across products and suppliers.
+* Overstocking increases inventory carrying costs and capital lock-in.
+* Understocking leads to missed sales opportunities and customer dissatisfaction.
+* Demand forecasting is difficult using manual estimation techniques.
+* Inventory behavior varies significantly across products and suppliers.
+* Inventory managers often lack visibility into demand drivers and stock risks.
 
 ### Project Objectives
 
-* Predict total sales (`SaleTot`)
-* Identify key drivers of sales performance
-* Segment products based on inventory characteristics
-* Support inventory optimization and forecasting
-
----
-
-## 📊 Dataset Information
-
-The dataset consists of real-world medical inventory records collected from operational inventory management systems.
-
-### Note
-
-Due to confidentiality requirements, the original dataset cannot be publicly shared.
-
-The repository contains the complete analysis workflow, machine learning models, visualizations, and deployment code without exposing sensitive business information.
+* Predict total sales (`SaleTot`) using machine learning.
+* Identify the most influential inventory variables affecting demand.
+* Explain model predictions using SHAP Explainable AI.
+* Categorize products into inventory segments using clustering.
+* Support inventory planning through actionable business recommendations.
+* Provide interactive analytics for operational decision-making.
 
 ---
 
 ## ⚙️ Technology Stack
 
-### Programming & Analysis
+### Programming & Data Processing
 
 * Python
 * Pandas
@@ -80,6 +76,7 @@ The repository contains the complete analysis workflow, machine learning models,
 
 ### Data Visualization
 
+* Plotly
 * Matplotlib
 * Seaborn
 
@@ -92,14 +89,18 @@ The repository contains the complete analysis workflow, machine learning models,
 
 * SHAP
 
-### Deployment
+### Interactive Application
 
-* Streamlit Community Cloud
+* Streamlit
 
 ### Version Control
 
 * Git
 * GitHub
+
+### Deployment
+
+* Streamlit Community Cloud
 
 ---
 
@@ -120,20 +121,26 @@ Hyperparameter Tuning
         ↓
 Model Evaluation
         ↓
+Model Comparison
+        ↓
 Feature Importance Analysis
         ↓
 SHAP Explainability
         ↓
 K-Means Clustering
         ↓
+Interactive Dashboard Development
+        ↓
+Business Recommendation Engine
+        ↓
 Streamlit Deployment
+
 ```
 
 ---
-
 ## 📈 Exploratory Data Analysis
 
-EDA was performed to understand inventory behavior and uncover business insights.
+Exploratory Data Analysis (EDA) was performed to understand inventory behavior, identify demand patterns, evaluate supplier performance, and uncover opportunities for inventory optimization.
 
 ### Key Analyses
 
@@ -142,6 +149,8 @@ EDA was performed to understand inventory behavior and uncover business insights
 * Inventory Hoarding Analysis
 * Purchase vs Sales Analysis
 * Stock vs Sales Analysis
+* Inventory Value Distribution
+* Inventory Exposure Analysis
 * Overstocked Product Identification
 
 ### Business Insights
@@ -150,10 +159,58 @@ EDA was performed to understand inventory behavior and uncover business insights
 * Overstocked inventory was detected for cost reduction opportunities.
 * Supplier performance patterns were analyzed.
 * Inventory utilization trends were discovered.
+* High inventory exposure products were identified for monitoring.
+* Demand concentration patterns were uncovered.
+
+---
+
+## 📊 Interactive Analytics Dashboard
+
+The original static EDA reports were transformed into an interactive analytics dashboard using Plotly and Streamlit.
+
+The dashboard allows users to dynamically explore inventory behavior through filters, KPIs, and interactive visualizations.
+
+### Dashboard Features
+
+#### Executive KPI Monitoring
+
+* Total Products
+* Total Companies
+* Total Sales Units
+* Inventory Value
+* Inventory Turnover
+* Stock-to-Sales Ratio
+* Overstock Risk Indicators
+
+#### Interactive Analytics
+
+* Dynamic Company Filtering
+* Product Type Filtering
+* Product-Level Analysis
+* Interactive Plotly Charts
+* Inventory Distribution Analysis
+* Inventory Exposure Analysis
+
+#### Executive Insights
+
+* Fastest Moving Products
+* Top Performing Companies
+* Inventory Exposure Monitoring
+* Executive Summary & Action Recommendations
+
+### Business Value
+
+* Faster operational analysis
+* Improved inventory visibility
+* Better procurement planning
+* Enhanced inventory risk monitoring
+* Data-driven decision support
 
 ---
 
 ## 🤖 Machine Learning Models Evaluated
+
+Multiple machine learning and ensemble learning approaches were evaluated to identify the most effective model for medical inventory sales forecasting.
 
 ### Tree-Based Models
 
@@ -178,7 +235,15 @@ EDA was performed to understand inventory behavior and uncover business insights
 * Stacking GBR
 * Stacking XGB
 
-A total of **14 models** were evaluated and compared.
+### Model Evaluation Metrics
+
+* R² Score
+* RMSE
+* MAE
+
+A total of **14 machine learning and ensemble models** were trained, tuned, and evaluated.
+
+The final production model was selected based on predictive accuracy, error minimization, and generalization performance.
 
 ---
 
@@ -188,11 +253,11 @@ A total of **14 models** were evaluated and compared.
 
 **Gradient Boosting Regressor**
 
-| Metric   | Value  |
-| -------- | ------ |
+| Metric | Value |
+|----------|----------|
 | R² Score | 0.7978 |
-| RMSE     | 9.692  |
-| MAE      | 4.415  |
+| RMSE | 9.692 |
+| MAE | 4.415 |
 
 ### Why Gradient Boosting?
 
@@ -200,35 +265,18 @@ A total of **14 models** were evaluated and compared.
 * Lowest RMSE
 * Lowest MAE
 * Strong Generalization Performance
+* Stable Forecasting Behavior
 * Consistent Prediction Accuracy
 
----
-
-## Model Comparison Dashboard
-
-<p align="center">
-  <img src="images\model_comparison1.png" width="100%">
-</p>
-
-<p align="center">
-  <img src="images\model_comparison2.png" width="100%">
-</p>
-
-<p align="center">
-  <img src="images\model_comparison3.png" width="100%">
-</p>
-
-<p align="center">
-  <img src="images\model_comparison4.png" width="100%">
-</p>
+The Gradient Boosting Regressor consistently outperformed all competing models and was selected as the final production model for deployment.
 
 ---
 
 ## 📌 Feature Importance Analysis
 
-Feature importance analysis was performed using the final tuned Gradient Boosting model.
+Feature importance analysis was performed using the final tuned Gradient Boosting Regressor to understand which variables most strongly influenced sales predictions.
 
-### Top Predictive Features
+### Most Influential Features
 
 1. OStk (Opening Stock)
 2. PurTot (Purchase Total)
@@ -236,46 +284,54 @@ Feature importance analysis was performed using the final tuned Gradient Boostin
 4. Packing
 5. Product Type Features
 
-These variables contributed the majority of the predictive power used for sales forecasting.
+### Key Findings
+
+* Inventory-related variables contributed the majority of predictive power.
+* Opening Stock emerged as the strongest sales predictor.
+* Purchase Quantity significantly influenced demand forecasts.
+* Product category information provided additional predictive value.
+* Inventory behavior was a stronger predictor than product classification alone.
+
+These findings helped validate the model's learning behavior and business relevance.
 
 ---
 
 ## 🧠 Explainable AI (SHAP)
 
-SHAP (SHapley Additive exPlanations) was used to interpret model behavior and increase prediction transparency.
+SHAP (SHapley Additive exPlanations) was implemented to improve model transparency and explain prediction behavior.
 
-### Implemented Visualizations
+### Implemented Explainability Techniques
 
 * SHAP Summary Plot
 * SHAP Waterfall Plot
+* Feature Ranking Analysis
+* Business-Oriented Interpretation
 
-### Benefits
+### Explainability Objectives
 
-* Global feature importance understanding
-* Individual prediction explanations
-* Improved model interpretability
-* Increased stakeholder trust
+* Understand global model behavior.
+* Explain individual predictions.
+* Identify the strongest demand drivers.
+* Improve stakeholder trust in forecasts.
 
----
+### Key Insights
 
-## Explainable AI (SHAP) Page
+* Opening Stock (OStk) is the strongest predictor of future sales.
+* Purchase Quantity (PurTot) significantly influences forecasting behavior.
+* Inventory-related variables dominate model decisions.
+* Product-type variables provide secondary predictive influence.
 
+### Business Value
 
-<p align="center">
-  <img src="images\shap_page1.png" width="100%">
-</p>
-
-
-<p align="center">
-  <img src="images\shap_page2.png" width="100%">
-</p>
-
+Explainability enables inventory managers to understand why forecasts are generated and which operational factors drive predicted demand.
 
 ---
 
 ## 📦 Inventory Segmentation
 
-K-Means Clustering was applied to segment products based on inventory characteristics.
+K-Means Clustering was applied to identify groups of products with similar inventory and sales characteristics.
+
+This unsupervised machine learning approach enables inventory managers to better understand inventory behavior and develop targeted inventory strategies.
 
 ### Cluster Profiles
 
@@ -283,28 +339,42 @@ K-Means Clustering was applied to segment products based on inventory characteri
 
 * Low sales volume
 * Slow inventory turnover
+* Lower replenishment priority
+* Requires periodic monitoring
 
 #### Cluster 1 – Fast-Moving Products
 
 * High sales volume
 * Frequent stock movement
+* Strong customer demand
+* High replenishment priority
 
 #### Cluster 2 – High-Value Products
 
 * High inventory value
-* Requires careful monitoring
+* Significant financial exposure
+* Requires careful inventory monitoring
+* Important for inventory optimization
 
 #### Cluster 3 – Bulk & Moderate-Demand Products
 
-* Moderate demand
+* Moderate sales demand
 * Larger inventory quantities
+* Supports routine inventory operations
+* Occasional high-volume transactions
 
 ### Business Value
 
 * Inventory Optimization
-* Demand Forecasting
-* Stock Planning
+* Demand Forecasting Support
+* Better Stock Planning
 * Resource Allocation
+* Inventory Risk Reduction
+* Segment-Based Inventory Strategies
+
+The clustering process successfully identified four distinct inventory groups, enabling more targeted inventory management decisions.
+
+---
 
 ---
 
@@ -326,17 +396,50 @@ K-Means Clustering was applied to segment products based on inventory characteri
 
 ## 🚀 Streamlit Dashboard
 
-The project was converted into an interactive multi-page Streamlit application.
+The project was deployed as a multi-page interactive Streamlit application that combines analytics, forecasting, explainability, and inventory segmentation into a single business-focused platform.
 
 ### Dashboard Pages
 
 * Home
-* EDA Dashboard
+* Interactive Analytics Dashboard
 * Sales Prediction
 * Model Comparison
-* Explainable AI
+* Explainable AI (SHAP)
 * Inventory Segmentation
 * About
+
+### Dashboard Capabilities
+
+#### Interactive Analytics Dashboard
+
+* Executive KPI Monitoring
+* Interactive Plotly Visualizations
+* Dynamic Filtering
+* Inventory Exposure Analysis
+* Executive Business Insights
+
+#### Sales Prediction Engine
+
+* Sales Forecasting
+* Demand Classification
+* Inventory Risk Assessment
+* Business Recommendation Engine
+* Inventory Turnover Analysis
+
+#### Explainable AI
+
+* SHAP Summary Analysis
+* SHAP Waterfall Analysis
+* Feature Ranking
+* Business Interpretation
+
+#### Inventory Segmentation
+
+* K-Means Clustering
+* Cluster Profiling
+* Inventory Categorization
+
+The deployed application transforms machine learning outputs into actionable inventory management insights.
 
 ---
 
@@ -347,13 +450,142 @@ Medical-Inventory-Sales-Prediction/
 
 ├── app.py
 ├── pages/
+│   ├── 1_Home.py
+│   ├── 2_EDA_Dashboard.py
+│   ├── 3_Prediction.py
+│   ├── 4_Model_Comparison.py
+│   ├── 5_Explainable_AI.py
+│   ├── 6_Inventory_Segmentation.py
+│   └── 7_About.py
+│
 ├── utils/
+│   ├── prediction.py
+│   └── history.py
+│
 ├── models/
+│   ├── medical_inventory_gb_model.pkl
+│   ├── model_columns.pkl
+│   └── dashboard_data.pkl
+│
 ├── images/
 ├── notebooks/
 ├── requirements.txt
 └── README.md
+
 ```
+---
+
+## 📦 Pretrained Models
+
+The repository includes pre-trained model files required for inference and dashboard functionality.
+
+---
+
+## 🔮 Prediction Recommendation Engine
+
+The prediction module extends beyond forecasting by translating model outputs into inventory management recommendations.
+
+<p align="center">
+  <img src="images\prediction_page.png" width="100%">
+</p>
+
+### Prediction Features
+
+* Sales Forecasting
+* Demand Classification
+* Inventory Risk Assessment
+* Inventory Turnover Analysis
+* Business Recommendations
+
+### Demand Categories
+
+* High Demand
+* Medium Demand
+* Low Demand
+
+### Inventory Risk Categories
+
+* Stockout Risk
+* Balanced Inventory
+* Overstock Risk
+
+### Business Recommendations
+
+The application automatically generates inventory management recommendations based on predicted demand and inventory conditions.
+
+Examples include:
+
+* Increase procurement
+* Maintain inventory levels
+* Monitor inventory closely
+* Reduce future purchases
+
+This transforms the project from a forecasting model into a business decision-support system.
+
+---
+
+## 🚀 Future Improvements
+
+Potential future enhancements include:
+
+### Backend & Data Engineering
+
+* SQLite Integration
+* PostgreSQL Migration
+* Prediction Monitoring
+* Data Versioning
+
+### API Development
+
+* FastAPI Integration
+* Prediction API Endpoints
+* Analytics API Services
+
+### MLOps
+
+* Docker Containerization
+* CI/CD Automation
+* Model Monitoring
+* Automated Testing
+
+### Cloud Deployment
+
+* AWS Deployment
+* Azure Deployment
+* GCP Deployment
+
+### Explainability Enhancements
+
+* Interactive SHAP Visualizations
+* User-Specific Prediction Explanations
+* Dynamic Explainability Dashboards
+
+These improvements were intentionally left outside the current project scope to maintain focus on the core machine learning and analytics solution.
+
+---
+
+## ⭐ Project Highlights
+
+* End-to-End Machine Learning Pipeline
+* Real-World Medical Inventory Use Case
+* 14 Machine Learning Model Comparisons
+* Hyperparameter Tuning
+* Ensemble Learning
+* Gradient Boosting Deployment
+* Interactive Analytics Dashboard
+* Plotly Visualizations
+* Executive KPI Monitoring
+* Demand Classification System
+* Inventory Risk Assessment
+* Business Recommendation Engine
+* SHAP Explainability
+* Feature Importance Analysis
+* K-Means Inventory Segmentation
+* Multi-Page Streamlit Application
+* Streamlit Cloud Deployment
+* Confidential Dataset Handling
+* Business Decision Support Analytics
+* Portfolio-Ready Deployment
 
 ---
 
@@ -402,20 +634,6 @@ http://localhost:8501
 
 ---
 
-## 📦 Pretrained Models
-
-The repository includes pretrained model files:
-
-```text
-models/
-├── medical_inventory_gb_model.pkl
-└── model_columns.pkl
-```
-
-This allows users to run predictions immediately without retraining the model.
-
----
-
 ## 🔄 Reproducing the Analysis
 
 To reproduce the complete machine learning workflow:
@@ -458,33 +676,3 @@ https://www.linkedin.com/in/hemanth-sai-charagundla-4a8659376/
 💻 GitHub:
 
 https://github.com/Hemanthsai456
-
----
-
-## ⭐ Project Highlights
-
-* End-to-End Machine Learning Pipeline
-* 14 Model Comparisons
-* Hyperparameter Tuning
-* Feature Importance Analysis
-* SHAP Explainability
-* K-Means Segmentation
-* Business Insight Generation
-* Interactive Streamlit Dashboard
-* Streamlit Application Deployed
-* Real-World Business Use Case
-* Confidential Dataset Handling
-* Portfolio-Ready Deployment
-
----
-
-## 🔮 Future Enhancements
-
-- Interactive Plotly Dashboards for advanced data visualization.
-- Prediction History Tracking using SQLite or PostgreSQL.
-- FastAPI backend for serving model predictions as REST APIs.
-- Docker containerization for simplified deployment.
-- Automated PDF report generation for inventory insights.
-- Cloud deployment using AWS, GCP, or Azure.
-- User authentication and role-based access control.
-- Model monitoring for tracking prediction performance over time.
