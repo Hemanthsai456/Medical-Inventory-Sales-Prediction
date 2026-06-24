@@ -97,5 +97,4 @@ This project uses historical inventory and procurement data to predict future sa
 - Technical Architecture Report
 - Error Analysis Report
 - Business Impact Report
-- Model Performance Report
 """)
