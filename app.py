@@ -1,12 +1,12 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Medical Inventory Sales Prediction & Segmentation",
+    page_title="Medical Inventory Forecasting & Decision Support System",
     page_icon="💊",
     layout="wide"
 )
 
-st.title("💊 Medical Inventory Sales Prediction & Segmentation")
+st.title("💊 Medical Inventory Forecasting & Decision Support System")
 
 st.markdown("""
 ### End-to-End Machine Learning Project
@@ -43,6 +43,7 @@ This project uses historical inventory and purchase information to predict futur
 - 🤖 Machine Learning Models
 - ⚙️ Hyperparameter Tuning
 - 📌 Feature Importance Analysis
+- 📉 Error Analysis
 - 🧠 SHAP Explainability
 - 📦 K-Means Inventory Segmentation
 - 🚀 Streamlit Deployment
@@ -66,6 +67,8 @@ Model Training
 Hyperparameter Tuning
         ↓
 Model Comparison
+        ↓
+Error Analysis
         ↓
 SHAP Explainability
         ↓

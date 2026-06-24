@@ -225,6 +225,21 @@ if predict_btn:
         st.success(f"✅ Recommended Action:\n\n{recommendation}")
         st.info(f"📌 Suggested Strategy:\n\n{strategy}")
 
+        st.markdown("### 🔄 Model-Assisted Inventory Planning Workflow")
+        st.code("""
+        Inventory Data
+            ↓
+        Sales Prediction
+            ↓
+        Demand Classification
+            ↓
+        Inventory Risk Assessment
+            ↓
+        Procurement Recommendation
+            ↓
+        Inventory Planning Decision
+        """)
+
         st.markdown("### 💼 Expected Business Impact")
 
         if demand_level == "High":
@@ -295,10 +310,85 @@ if predict_btn:
                 st.error(
                     "📉 Low expected inventory turnover. Monitor inventory levels to avoid overstocking."
                 )
+        st.info(
+                "The matrix below illustrates common inventory risk scenarios based on forecasted demand and available stock levels."
+            )
+        st.markdown("### ⚠️ Inventory Risk Matrix")
+        risk_df = pd.DataFrame({
+            "Demand": [
+                "High",
+                "High",
+                "Low",
+                "Low"
+            ],
+            "Inventory": [
+                "Low",
+                "High",
+                "Low",
+                "High"
+            ],
+            "Risk": [
+                "Stockout Risk",
+                "Balanced",
+                "Low Risk",
+                "Overstock Risk"
+            ]
+        })
+
+        st.dataframe(
+            risk_df,
+            use_container_width=True,
+            hide_index=True
+        )
 
         st.caption(
             "Prediction generated using the trained Gradient Boosting Regressor model."
         )
+
+        st.markdown("### 🏥 Procurement Decision Simulation")
+        if demand_level == "High":
+
+            st.success("""
+        Example Operational Decision
+
+        Forecast: High Demand
+
+        Procurement Team Action:
+        Increase purchase quantity and maintain safety stock.
+
+        Expected Result:
+        Improved product availability and lower stockout probability.
+        """)
+
+        elif demand_level == "Medium":
+
+            st.info("""
+        Example Operational Decision
+
+        Forecast: Medium Demand
+
+        Procurement Team Action:
+        Maintain standard purchasing cycle.
+
+        Expected Result:
+        Balanced inventory and stable turnover.
+        """)
+
+        else:
+
+            st.warning("""
+        Example Operational Decision
+
+        Forecast: Low Demand
+
+        Procurement Team Action:
+        Reduce future purchases and review inventory exposure.
+
+        Expected Result:
+        Reduced excess inventory and lower carrying costs.
+        """)
+
+
     # Save prediction record to history
     save_prediction(
         {
@@ -314,4 +404,5 @@ if predict_btn:
             "Recommendation": recommendation
         }
     )
+    
 

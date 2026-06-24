@@ -1,4 +1,4 @@
-# 💊 Medical Inventory Sales Prediction & Segmentation
+# 💊 Medical Inventory Forecasting & Decision Support System
 
 ## 🚀 Live Demo
 
@@ -12,9 +12,22 @@ https://github.com/Hemanthsai456/Medical-Inventory-Sales-Prediction
 
 ---
 
+## 📚 Project Documentation
+
+This project includes detailed technical and business documentation:
+
+- Technical Architecture Report
+- Error Analysis Report
+- Business Impact Report
+- Model Performance Report
+
+These reports provide additional insight into model behavior, forecasting performance, business workflows, and system architecture.
+
+---
+
 ## 📌 Project Overview
 
-Medical Inventory Sales Prediction & Segmentation is an end-to-end Machine Learning and Analytics project developed to forecast medical inventory sales and support inventory management decisions through data-driven insights.
+Medical Inventory Forecasting & Decision Support System is an end-to-end Machine Learning and Analytics project developed to forecast medical inventory sales and support inventory management decisions through data-driven insights.
 
 The project combines predictive modeling, interactive analytics dashboards, explainable AI, inventory segmentation, and business recommendation systems into a complete decision-support application.
 
@@ -272,6 +285,29 @@ The Gradient Boosting Regressor consistently outperformed all competing models a
 
 ---
 
+## 📉 Error Analysis
+
+Model evaluation extended beyond traditional performance metrics to understand forecasting behavior across different demand scenarios.
+
+### Key Findings
+
+- Low and medium demand products achieved strong prediction accuracy.
+- Prediction error increased for high-demand products and demand spikes.
+- Most large prediction errors occurred during extreme inventory situations.
+- Residual analysis showed generally stable prediction behavior across the majority of observations.
+
+### Error Analysis Components
+
+- Demand Group Performance Analysis
+- Top 20 Prediction Error Investigation
+- Residual Distribution Analysis
+- Actual vs Predicted Evaluation
+- Model Limitation Assessment
+
+These analyses helped validate model reliability and identify opportunities for future forecasting improvements.
+
+---
+
 ## 📌 Feature Importance Analysis
 
 Feature importance analysis was performed using the final tuned Gradient Boosting Regressor to understand which variables most strongly influenced sales predictions.
@@ -426,6 +462,22 @@ The project was deployed as a multi-page interactive Streamlit application that 
 * Business Recommendation Engine
 * Inventory Turnover Analysis
 
+### Decision Support Workflow
+
+Inventory Data
+↓
+Sales Prediction
+↓
+Demand Classification
+↓
+Inventory Risk Assessment
+↓
+Procurement Recommendation
+↓
+Inventory Planning Decision
+
+The application converts machine learning forecasts into operational recommendations, enabling inventory managers to move from prediction to action.
+
 #### Explainable AI
 
 * SHAP Summary Analysis
@@ -455,8 +507,9 @@ Medical-Inventory-Sales-Prediction/
 │   ├── 3_Prediction.py
 │   ├── 4_Model_Comparison.py
 │   ├── 5_Explainable_AI.py
-│   ├── 6_Inventory_Segmentation.py
-│   └── 7_About.py
+│   ├── 6_Error Analysis.py
+│   ├── 7_Inventory_Segmentation.py
+│   └── 8_About.py
 │
 ├── utils/
 │   ├── prediction.py
@@ -466,6 +519,10 @@ Medical-Inventory-Sales-Prediction/
 │   ├── medical_inventory_gb_model.pkl
 │   ├── model_columns.pkl
 │   └── dashboard_data.pkl
+├── documentation/
+│   ├── error_analysis/
+│   ├── Business_Impact_Report.md
+│   └── Technical_Architecture.md
 │
 ├── images/
 ├── notebooks/
@@ -567,25 +624,33 @@ These improvements were intentionally left outside the current project scope to 
 ## ⭐ Project Highlights
 
 * End-to-End Machine Learning Pipeline
-* Real-World Medical Inventory Use Case
-* 14 Machine Learning Model Comparisons
-* Hyperparameter Tuning
-* Ensemble Learning
-* Gradient Boosting Deployment
+* Real-World Medical Inventory Forecasting Use Case
+* 14 Machine Learning & Ensemble Model Comparisons
+* Hyperparameter Tuning & Model Selection
+* Gradient Boosting Regressor Deployment
 * Interactive Analytics Dashboard
-* Plotly Visualizations
 * Executive KPI Monitoring
-* Demand Classification System
-* Inventory Risk Assessment
-* Business Recommendation Engine
-* SHAP Explainability
+* Demand Classification Framework
+* Inventory Risk Assessment Engine
+* Procurement Recommendation System
+* Inventory Turnover Analysis
+* Model-Assisted Decision Support Workflow
+* Business Impact Simulation
+* Error Analysis & Model Diagnostics
+* Demand Group Performance Analysis
+* Residual Analysis & Prediction Error Investigation
+* SHAP Explainable AI
 * Feature Importance Analysis
 * K-Means Inventory Segmentation
+* Cluster Profiling & Inventory Strategy Analysis
 * Multi-Page Streamlit Application
 * Streamlit Cloud Deployment
-* Confidential Dataset Handling
+* Technical Architecture Documentation
+* Business Impact Documentation
+* Error Analysis Documentation
+* Confidential Real-World Dataset Handling
 * Business Decision Support Analytics
-* Portfolio-Ready Deployment
+* Portfolio-Ready Production Deployment
 
 ---
 

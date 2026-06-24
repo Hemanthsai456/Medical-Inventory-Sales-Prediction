@@ -1,11 +1,11 @@
 import streamlit as st
 
-st.title("💊 Medical Inventory Sales Prediction")
+st.title("💊 Medical Inventory Forecasting & Decision Support System")
 
 st.markdown("""
 ### Project Overview
 
-Medical Inventory Sales Prediction is an end-to-end Machine Learning application designed to forecast medical inventory sales and support inventory management decisions.
+Medical Inventory Forecasting & Decision Support System is an end-to-end Machine Learning application designed to forecast medical inventory sales and support inventory management decisions.
 
 The project combines predictive analytics, interactive dashboards, explainable AI, and inventory segmentation to transform raw inventory data into actionable business insights.
 
@@ -48,6 +48,13 @@ This project uses historical inventory and procurement data to predict future sa
 - Inventory risk assessment
 - Business recommendation engine
 - Inventory turnover analysis
+            
+#### 📉 Error Analysis & Model Diagnostics
+- Demand Group Performance Analysis
+- Residual Analysis
+- Actual vs Predicted Evaluation
+- Top Prediction Error Investigation
+- Model Limitation Assessment
 
 #### 🧠 Explainable AI
 
@@ -77,10 +84,18 @@ This project uses historical inventory and procurement data to predict future sa
 
 ### Business Value
 
-- Better inventory planning
-- Reduced stock wastage
-- Improved procurement decisions
-- Demand forecasting support
-- Inventory risk identification
-- Data-driven decision making
+- Demand Forecasting Support
+- Procurement Decision Support
+- Inventory Risk Identification
+- Inventory Segmentation
+- Inventory Turnover Monitoring
+- Business Recommendation Generation
+- Data-Driven Inventory Planning
+
+#### Documentation
+            
+- Technical Architecture Report
+- Error Analysis Report
+- Business Impact Report
+- Model Performance Report
 """)

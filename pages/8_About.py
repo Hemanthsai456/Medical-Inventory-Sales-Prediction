@@ -9,7 +9,7 @@ st.title("👨‍💻 About This Project")
 st.header("💊 Project Overview")
 
 st.markdown("""
-**Medical Inventory Sales Prediction** is an end-to-end Machine Learning project developed to forecast medical inventory sales using historical inventory and purchase data.
+**Medical Inventory Forecasting & Decision Support System** is an end-to-end Machine Learning project developed to forecast medical inventory sales using historical inventory and purchase data.
 
 The project combines predictive modeling, interactive analytics dashboards, explainable AI, inventory segmentation, and deployment into a complete business-focused decision support solution.
 
@@ -53,6 +53,17 @@ st.markdown("""
 - Ensemble Learning
 - Hyperparameter Tuning
 - Model Evaluation
+- Model Selection
+- Error Analysis & Diagnostics
+            
+#### Business Analytics & Decision Support
+
+- Demand Classification
+- Inventory Risk Assessment
+- Procurement Recommendation Systems
+- Inventory Turnover Analysis
+- Business Impact Simulation
+- Decision Support Analytics
 
 ### Explainable AI
 
@@ -79,6 +90,11 @@ st.markdown("""
 - K-Means Clustering
 - Cluster Profiling
 - Inventory Segmentation
+            
+#### Documentation
+- Technical Architecture Documentation
+- Error Analysis Reporting
+- Business Impact Documentation
 
 ### Deployment
 
@@ -115,6 +131,8 @@ st.markdown("""
 
 st.header("🔄 Project Workflow")
 
+# Project Workflow
+
 st.code("""
 Raw Inventory Data
         ↓
@@ -124,22 +142,31 @@ Exploratory Data Analysis
         ↓
 Feature Engineering
         ↓
-Model Training
+Model Development
         ↓
 Hyperparameter Tuning
         ↓
-Model Comparison
+Model Evaluation
+        ↓
+Error Analysis
         ↓
 SHAP Explainability
         ↓
-K-Means Segmentation
+Inventory Segmentation
+        ↓
+Demand Classification
+        ↓
+Inventory Risk Assessment
+        ↓
+Procurement Recommendation Engine
+        ↓
+Business Impact Simulation
         ↓
 Interactive Dashboard Development
         ↓
-Business Recommendation Engine
-        ↓
-Model Deployment
+Streamlit Deployment
 """)
+
 
 # ==================================
 # Developer
